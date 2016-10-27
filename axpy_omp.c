@@ -20,8 +20,8 @@ double get_time()
 #ifdef OFFLOAD
 #pragma omp declare target
 #endif
-float fa[SIZE] __attribute__((align(64)));
-float fb[SIZE] __attribute__((align(64)));
+float fa[SIZE] __attribute__((aligned(64)));
+float fb[SIZE] __attribute__((aligned(64)));
 #ifdef OFFLOAD
 #pragma omp end declare target
 #endif

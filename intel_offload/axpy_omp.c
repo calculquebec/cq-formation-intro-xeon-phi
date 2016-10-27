@@ -19,11 +19,11 @@ double get_time()
 }
 
 #ifdef __INTEL_OFFLOAD
-float fa[SIZE] __attribute__((align(64))) __attribute__((target(mic)));
-float fb[SIZE] __attribute__((align(64))) __attribute__((target(mic)));
+float fa[SIZE] __attribute__((aligned(64))) __attribute__((target(mic)));
+float fb[SIZE] __attribute__((aligned(64))) __attribute__((target(mic)));
 #else
-float fa[SIZE] __attribute__((align(64)));
-float fb[SIZE] __attribute__((align(64)));
+float fa[SIZE] __attribute__((aligned(64)));
+float fb[SIZE] __attribute__((aligned(64)));
 #endif
 int main(int argc, char *argv[])
 {

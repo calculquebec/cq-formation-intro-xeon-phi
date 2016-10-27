@@ -3,12 +3,10 @@
 #PBS -l walltime=0:10:00
 #PBS -o miccheck.out
 #PBS -e miccheck.err
-#PBS -V
 #PBS -N schedtest
-
 
 cd $PBS_O_WORKDIR
 
 echo "Job started on `hostname` at `date`"
-module add ifort_icc/15.0
+module load intel/2015b
 miccheck
